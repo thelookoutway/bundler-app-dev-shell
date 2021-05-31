@@ -1,5 +1,5 @@
-{ buildInputs, shellHook ? "" }:
 { mkShell, stdenv, lib }:
+{ buildInputs, shellHook ? "" }:
 let
   environment = stdenv.mkDerivation {
     name = "environment";
