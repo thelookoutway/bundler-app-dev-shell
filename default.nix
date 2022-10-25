@@ -15,7 +15,7 @@ in mkShell {
   in ''
     if [ -z "$BUNDLE_PATH" ]; then
       export BUNDLE_PATH=.bundle/${environmentId}
-    else
+    elif [ "$BUNDLE_PATH" != ".bundle/${environmentId}" ]; then
       export BUNDLE_PATH=$BUNDLE_PATH/${environmentId}
     fi
   '' + lib.optionalString stdenv.isLinux ''
