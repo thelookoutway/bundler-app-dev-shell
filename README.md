@@ -21,7 +21,7 @@ Import the `default.nix` from this repository using either [Niv](https://github.
 Add the dependency.
 
 ```
-$ niv add fivegoodfriends/bundler-app-dev-shell
+$ niv add thelookoutway/bundler-app-dev-shell
 ```
 
 Import and use the function in your `shell.nix` file.
@@ -50,7 +50,7 @@ let
   nixpkgs = import <nixpkgs> { };
   mkBundlerAppDevShell-source = builtins.fetchTarball {
     url =
-      "https://github.com/fivegoodfriends/bundler-app-dev-shell/archive/<GIT REV SHA>.tar.gz";
+      "https://github.com/thelookoutway/bundler-app-dev-shell/archive/<GIT REV SHA>.tar.gz";
   };
   mkBundlerAppDevShell =
     nixpkgs.callPackage (import mkBundlerAppDevShell-source) { };
