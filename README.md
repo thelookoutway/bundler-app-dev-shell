@@ -29,7 +29,7 @@ Import and use the function in your `shell.nix` file.
 ```nix
 let
   sources = import ./nix/sources.nix;
-  nixpkgs = import sources.nixpkgs;
+  nixpkgs = import sources.nixpkgs {};
   mkBundlerAppDevShell =
     nixpkgs.callPackage (import sources.bundler-app-dev-shell) { };
 in mkBundlerAppDevShell {
